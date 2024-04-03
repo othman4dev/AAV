@@ -21,6 +21,9 @@ class VoitureController extends Controller
         foreach ($voitures as $voiuturePrix) {
             $totalPrix = $totalPrix + $voiuturePrix->prix;
         }
+        if ($CountVoitures == 0) {
+            return response()->json(['error' => 'No Voiture found'], 404);
+        }
         $MoyannePrix = $totalPrix / $CountVoitures;
         return response()->json(['success' => 'the estimation price is:  ' . $MoyannePrix . ' DH'], 202);
     }

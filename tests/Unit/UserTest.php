@@ -37,7 +37,6 @@ class UserTest extends TestCase
             'email' => 'test@example.com',
             'password' => 'password',
         ]);
-
         $userData = [
             'name' => 'Test Update User',
             'email' => 'testUpdate@example.com',
